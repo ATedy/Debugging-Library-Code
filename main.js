@@ -1,4 +1,5 @@
 const addButtons = document.querySelectorAll(".add-button");
+console.log(addButtons);
 const formContainer = document.getElementById("form-container");
 const tableBody = document.getElementById("table-body");
 const submitted = document.getElementById("submitted");
@@ -19,16 +20,16 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+myLibrary.push(book1);
 myLibrary.push(book2);
 
-render();
+// render();
 
 addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     formContainer.style.display = "block";
   });
-};
+})
 
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
@@ -36,7 +37,7 @@ function addDeleteButtons() {
   deleteButtons.forEach((button) => {
     if (button.getAttribute("data-book") == bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
